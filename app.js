@@ -12,7 +12,7 @@ app.set('view engine', 'ejs')
 app.use(bp.urlencoded({extended: true}))
 app.use(express.static("css"))
 
-mongoose.connect("mongodb+srv://dquangxyz:22DQuang@cluster0.feme6.mongodb.net/todolistDB", {
+mongoose.connect("mongodb+srv://dquangxyz:12344321@cluster0.feme6.mongodb.net/todolistDB", {
   useNewUrlParser: true
 })
 
@@ -21,10 +21,7 @@ const itemSchema = {
   name: String
 }
 const Item = mongoose.model("Item", itemSchema)
-const item1 = new Item({name: "Wake up"})
-const item2 = new Item({name: "Eat breakfast"})
-const item3 = new Item({name: "Drink water"})
-const defaultItem = [item1, item2, item3]
+const defaultItem = []
 
 const listSchema = {
   name: String,
